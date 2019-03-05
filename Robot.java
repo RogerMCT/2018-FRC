@@ -27,7 +27,6 @@ public class Robot extends TimedRobot {
 	public static Lift liftSystem;
 	public static Hang hangSystem;
 	public static OI oi;
-	public static Pneumatics pneumatics;
 
 	Command autonomousCommand;
 	SendableChooser<String> autoChooser = new SendableChooser<>();
@@ -40,7 +39,6 @@ public class Robot extends TimedRobot {
 		intakeSystem = new Intake();
 		liftSystem = new Lift();
 		hangSystem = new Hang();
-		pneumatics = new Pneumatics();
 		oi = new OI();
 		
 		UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();

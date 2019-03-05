@@ -1,7 +1,6 @@
 package org.usfirst.frc.team5484.robot;
 
 import edu.wpi.first.wpilibj.AnalogPotentiometer;
-import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Encoder;
@@ -46,19 +45,16 @@ public class RobotMap {
     // LED Indicator Controller (LightDrive12)
     public static LightDriveCAN ledIndicators;
     
-    // Pneumatics
-    public static Compressor compressor;
-    
     public static void init() {
     	// Initialize Left Motor Controllers
-        driveTrainLeft1 = new Talon(0);
+        driveTrainLeft1 = new Spark(0);
         driveTrainLeft1.setInverted(true);
-        driveTrainLeft2 = new Talon(1);
+        driveTrainLeft2 = new Spark(1);
         driveTrainLeft2.setInverted(true);
         // Initialize Right Motor Controllers
-        driveTrainRight1 = new Talon(2);
+        driveTrainRight1 = new Spark(2);
         driveTrainRight1.setInverted(true);
-        driveTrainRight2 = new Talon(3);
+        driveTrainRight2 = new Spark(3);
         driveTrainRight2.setInverted(true);
         // Initialize Ultrasonic Range Finder
 //        driveTrainUltrasonic = new Ultrasonic(1,1);
@@ -94,12 +90,9 @@ public class RobotMap {
         hangMotor = new Talon(7);
         hangMotor.setInverted(true);
         
-        // Pneumatics
-        compressor = new Compressor(0);
-        
         // Initialize LightDrive12
         ledIndicators = new LightDriveCAN();
-       
+                
     }    
     public static boolean isTopLimitReached()
     {

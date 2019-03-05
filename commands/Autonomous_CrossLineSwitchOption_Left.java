@@ -1,7 +1,6 @@
 package org.usfirst.frc.team5484.robot.commands;
 
 import org.usfirst.frc.team5484.robot.MatchData;
-import org.usfirst.frc.team5484.robot.Robot;
 import org.usfirst.frc.team5484.robot.subsystems.Lift;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
